@@ -12,5 +12,18 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cse19455/Node_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cse19455/Node_Project/issues"
+  },
+  "homepage": "https://github.com/Cse19455/Node_Project#readme",
+  "description": ""
 }
