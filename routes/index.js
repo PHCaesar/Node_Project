@@ -28,12 +28,12 @@ function createGetters() {
         cardGenerator(res, "Doc");
     });
 
-    fs.readdirSync("./public").forEach(site => {
+    /*fs.readdirSync("./public").forEach(site => {
         generateListeners(fs.readdirSync('./public/' + site), site);
         app.get("/Doc/" + site, (req, res) => {
             cardGenerator(res, site);
         });
-    })
+    })*/
 }
 /** 
  * generates one Get request for every file in those directorys
