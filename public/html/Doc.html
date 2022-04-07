@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'>
+    </script>
+    <link rel='stylesheet' href='../css/docStyles.css' />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css' integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M' crossorigin='anonymous'> </link>
+</head>
+
+<body>
+    <style type='text/css'>
+        .hidden {
+            display: none;
+        }
+        
+        .navbar {
+            position: absolute;
+            width: 100%;
+            background-color: black;
+            margin: 0px;
+            height: 5%;
+            padding-top: 0%;
+            margin-top: -5%;
+        }
+        
+        #searchbar {
+            margin-top: auto;
+            border-radius: 20px;
+            float: right;
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        function search() {
+            show(document.getElementById('searchbar').value.toUpperCase());
+        }
+
+        function show(input) {
+            console.log(input)
+            var list = document.getElementsByClassName('Headers');
+            console.log(list)
+            for (let item of list) {
+                if (!item.innerHTML.toUpperCase().startsWith(input)) {
+                    item.parentNode.parentNode.parentNode.classList.add('hidden');
+
+                } else
+                    item.parentNode.parentNode.parentNode.classList.remove('hidden');
+            }
+        }
+    </script>
+    <div class='navbar'>
+        <input id='searchbar' onchange='search()' style="overflow: hidden;"></input>
+    </div>
+    <div class='row align-items-center gap-3 ' style='margin: 5%;' id='HTMLS'>
+        <div class='col - sm - 6 p - 2 '>
+            <div class='card' style='height: 25em;border-radius: 30px;background-color:white;border: 0px solid;margin-top: 10%;background-color: #DDDDDD;'>
+                <div class='card-title'>
+                    <p style='background-color: #72D227;border-radius: 100%;width: 50px;height:50px;margin-left: -1.5%;margin-top: -1.5%;border-color: black;border-width: 1px;'><img src='../img/Html.png' height='60%' style='margin:20%'></p>
+                </div>
+                <div class='card-body'>
+                    <h1 class='text-center Headers'>Sitename</h1>
+                    <div style='width:100%;vertical-align: middle;margin-top: 15%;display: flex;justify-content: center; /* align horizontal */align-items: center; /* align vertical */'><button style='height:50px;width:110px;border-radius: 10px;border-color: black;border-width: 2px;background-color: #C4C4C4;'><img src='../img/cursor.png' height='80%'><b>Open</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Sitecard HTML-->
+        <div class='col - sm - 6 p - 2 '>
+            <div class='card' style='height: 25em;border-radius: 30px;background-color:white;border: 0px solid;margin-top: 10%;background-color: #DDDDDD;'>
+                <div class='card-title'>
+                    <p style='background-color: #72D227;border-radius: 100%;width: 50px;height:50px;margin-left: -1.5%;margin-top: -1.5%;border-color: black;border-width: 1px;'><img src='../img/Html.png' height='60%' style='margin:20%'></p>
+                </div>
+                <div class='card-body'>
+                    <h1 class='text-center Headers'>man</h1>
+                    <div style='width:100%;vertical-align: middle;margin-bottom:5%;margin-top: 15%;'>
+                        <button style='height:50px;width:25%;border-radius: 10px;border-color: black;border-width: 2px;background-color: #C4C4C4;'><img src='../img/code.png' height='80%'><b>Code</b></button>
+                        <button style='margin-left: 46%;height:50px;width:25%;border-radius: 10px;border-color: black;border-width: 2px;background-color: #C4C4C4;'><img src='../img/cursor.png' height='80%'><b>Open</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

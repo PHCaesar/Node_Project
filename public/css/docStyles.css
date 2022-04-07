@@ -1,0 +1,46 @@
+    .vertical-center-text {
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        size: 100%;
+        height: 100%;
+        padding-top: center;
+        padding-bottom: center;
+    }
+    
+    .Headers {
+        position: relative;
+        font-size: 5em;
+    }
+    
+    #HTML,
+    #JS,
+    #CSS,
+    #TS,
+    #SCSS {
+        border: 3px solid;
+    }
+    
+    #HTML {
+        background-color: #f4faff;
+    }
+    
+    #CSS {
+        background-color: #dbedff;
+    }
+    
+    #JS {
+        background-color: #accbff;
+    }
+    
+    #SCSS {
+        background-color: #93acff
+    }
+    
+    #TS {
+        background-color: #8993ff;
+    }
+    
+    .card {
+        background-color: blue;
+    }
