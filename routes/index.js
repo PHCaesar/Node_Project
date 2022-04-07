@@ -1,12 +1,17 @@
-var express = require('express');
+const http = require('http');
 var fs = require('fs');
+//const hostname = '127.0.0.1';
+//const port = 42069;
+const express = require('express');
 var router = express.Router();
 var app = express();
+
 
 
 app.use(express.static(__dirname + '/public'));
 
 app.get("/", (req, res) => {
+    res.setHeader('Content-Type', 'text/html');
     readFilesFromName("index.html", res, "html");
 });
 
@@ -28,12 +33,12 @@ function createGetters() {
         cardGenerator(res, "Doc");
     });
 
-    /*fs.readdirSync("./public").forEach(site => {
+    fs.readdirSync("./public").forEach(site => {
         generateListeners(fs.readdirSync('./public/' + site), site);
         app.get("/Doc/" + site, (req, res) => {
             cardGenerator(res, site);
         });
-    })*/
+    })
 }
 /** 
  * generates one Get request for every file in those directorys
